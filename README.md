@@ -19,10 +19,11 @@ Before getting started, make sure you have the following installed:
 - Hangfire NuGet package
 
 # Getting Started
-Clone this repository to your local machine.
-(git clone https://github.com/your-username/twilio-hangfire-scheduler.git)
+1. Clone this repository to your local machine.
+(git clone (https://github.com/Ahmed-Mohamedd/Schedulig-Message-Using-Twilio-And-Hangfire.git))
 
-Open the solution file TestSchedulingMessageWithTwilioandHangfire.sln in Visual Studio .
+2. Open the solution file (TestSchedulingMessageWithTwilioandHangfire.sln) in Visual Studio.
+
 
 In the terminal, navigate to the project directory and run the following command to install the required packages:
 
