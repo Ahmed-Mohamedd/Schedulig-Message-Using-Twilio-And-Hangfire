@@ -18,8 +18,9 @@ Before getting started, make sure you have the following installed:
 - Twilio account and credentials (Account SID, Auth Token)
 - Hangfire NuGet package
 
-
-**Clone this repository to your local machine.
+# Getting Started
+Clone this repository to your local machine.
+(git clone https://github.com/your-username/twilio-hangfire-scheduler.git)
 
 Open the solution file TestSchedulingMessageWithTwilioandHangfire.sln in Visual Studio .
 
