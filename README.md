@@ -39,16 +39,33 @@ Replace the values with your own Twilio account SID, auth token, and phone numbe
 
 4. Build and Run:
     Build and run the application using the following commands:
-      dotnet build
-      dotnet run
+      (dotnet build,
+      dotnet run)
 
-Open your web browser and navigate to http://localhost:5000.
+5. Access the Hangfire Dashboard:
+Open your browser and navigate to http://localhost:<port>/hangfire. Here, you can view and manage scheduled jobs.
 
-Enter the message details and schedule the message.
+# Project Structure
+ApiController.cs:
+This class contains methods for scheduling messages Which it called by HangfireService.
 
-Built With
+TwilioService.cs:
+The TwilioService class encapsulates the Twilio-related functionality, such as sending SMS messages or whatsApp message.
+
+Program.cs:
+The entry point of the application where i configure (hangfire & twilio) and allowing Dependency Injection For Both TwilioService & HangFireService.
+
+appsettings.json:
+Configuration file containing Twilio credentials and connection string for hangfire.
+
+
+# Contributing
+Feel free to contribute to this project by opening issues or submitting pull requests. Your feedback and improvements are highly appreciated!
+
+# Built With
 .NET Core
 Twilio
 Hangfire
-Authors
-Your Name
+
+# Authors
+Ahmed Mohamed
