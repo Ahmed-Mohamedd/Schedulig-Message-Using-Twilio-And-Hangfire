@@ -23,16 +23,10 @@ Before getting started, make sure you have the following installed:
 (git clone (https://github.com/Ahmed-Mohamedd/Schedulig-Message-Using-Twilio-And-Hangfire.git))
 
 2. Open the solution file (TestSchedulingMessageWithTwilioandHangfire.sln) in Visual Studio.
+  or Navigate to the Project Directory: bash (cd Scheduling Messages with Twilio and Hangfire)
 
-
-In the terminal, navigate to the project directory and run the following command to install the required packages:
-
-dotnet restore
-
-Create a new file named appsettings.json in the root directory of the project and add the following code:
-
-JSON
-AI-generated code. Review and use carefully. More info on FAQ.
+3. Configure Twilio Credentials:
+Update the appsettings.json file with your Twilio Account SID and Auth Token.
 
 {
   "Twilio": {
@@ -43,9 +37,10 @@ AI-generated code. Review and use carefully. More info on FAQ.
 }
 Replace the values with your own Twilio account SID, auth token, and phone number.
 
-Run the following command to start the application:
-
-dotnet run
+4. Build and Run:
+    Build and run the application using the following commands:
+      dotnet build
+      dotnet run
 
 Open your web browser and navigate to http://localhost:5000.
 
