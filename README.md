@@ -46,16 +46,19 @@ Replace the values with your own Twilio account SID, auth token, and phone numbe
 Open your browser and navigate to http://localhost:<port>/hangfire. Here, you can view and manage scheduled jobs.
 
 # Project Structure
-ApiController.cs:
+- ApiController.cs:
 This class contains methods for scheduling messages Which it called by HangfireService.
 
-TwilioService.cs:
+- HangFireService.cs:
+The HangFireService class encapsulates the hangfire-related functionality, such as scheduling Message or Recurring Message.
+
+- TwilioService.cs:
 The TwilioService class encapsulates the Twilio-related functionality, such as sending SMS messages or whatsApp message.
 
-Program.cs:
+- Program.cs:
 The entry point of the application where i configure (hangfire & twilio) and allowing Dependency Injection For Both TwilioService & HangFireService.
 
-appsettings.json:
+- appsettings.json:
 Configuration file containing Twilio credentials and connection string for hangfire.
 
 
