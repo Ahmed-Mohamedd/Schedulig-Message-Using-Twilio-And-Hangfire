@@ -13,9 +13,21 @@ namespace TestSchedulingMessageWithTwilioandHangfire.Services
         public HangfireService( IWhatsAppService whatsAppService)
         {
 
-            
             _whatsAppService=whatsAppService;
         }
+
+        public void EnqueuingMessage(string MobileNumber, string Body, DateTime appointment)
+        {
+            Console.WriteLine(DateTime.Now);
+            BackgroundJob.Enqueue(() => _whatsAppService.SendAsync(MobileNumber, Body).GetAwaiter());
+        }
+
+        public void RecurringMessage(string MobileNumber, string Body, DateTime appointment)
+        {
+            Console.WriteLine(DateTime.Now);
+            RecurringJob.AddOrUpdate($"message{new Guid()}",() => _whatsAppService.SendAsync(MobileNumber, Body).GetAwaiter(), Cron.Minutely);
+        }
+
         public void ScheduleMessage(string MobileNumber , string Body , DateTime appointment)
         {
             Console.WriteLine(DateTime.Now);
