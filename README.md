@@ -19,9 +19,9 @@ Before getting started, make sure you have the following installed:
 - Hangfire NuGet package
 
 
-Clone this repository to your local machine.
+**Clone this repository to your local machine.
 
-Open the solution file SchedulingMessages.sln in Visual Studio Code.
+Open the solution file TestSchedulingMessageWithTwilioandHangfire.sln in Visual Studio .
 
 In the terminal, navigate to the project directory and run the following command to install the required packages:
 
